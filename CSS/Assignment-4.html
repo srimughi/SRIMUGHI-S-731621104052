@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>loginpage</title>
+        <style>
+             .Registration{
+                border: 2px solid blue;
+                border-radius: 20px;
+                width: 300px;
+                position: absolute;
+                top: 150px;
+                left: 300px;
+             }
+             .logbtn{
+                width: 150px;
+                height: 50px;
+                border-radius: 20px;
+                background-color: blue;
+                color: white;
+                border: none;
+                cursor: pointer;
+                top: 150px;
+                left: 300px;   
+            }
+
+        </style>
+    </head>
+    <body>
+        <br><br>
+        <div class = "Registration">
+        <table width = "40%" align = "center">
+            <tr><th colspan ="2">Registration</th></tr>
+            <tr><td>FirstName</td><td><input type = "text"/></td></tr>
+            <tr><td>LastName</td><td><input type = "text"/></td></tr>
+            <tr><td>MobileNo</td><td><input type = "number"/></td></tr>
+            <tr><td>Email</td><td><input type = "email"/></td></tr>
+            <tr><td>DOB</td><td><input type = "date"/></td></tr>
+            <tr><td>Username</td><td><input type = "text"/></td></tr>
+            <tr><td>Password</td><td><input type = "password"/></td></tr>
+            <tr><td>Gender</td><td>
+            <input type = "radio" name ="gender"/>Male
+            <input type = "radio" name ="gender"/>Female
+            </td></tr>
+            <tr><td>Skills</td><td>
+            <input type = "checkbox" /> Java
+            <input type = "checkbox" /> C++
+            <input type = "checkbox" /> Python
+            </td></tr>
+            <tr><td>City</td><td>
+            <select>
+                <option>Salem</option>
+                <option>Erode</option>
+                <option>Nammakkal</option>
+            </select>
+            </td></tr>
+            <tr><td>Address</td><td>
+                <textarea rows ="5" cols ="25"></textarea>
+            </td></tr>
+                <tr><td colspan="3" align="center">
+<div class="Login"></div>
+                <input type = "button" value = "Login"/></td></tr>
+            </table>
+            </div>
+            </body>
+        </html>
