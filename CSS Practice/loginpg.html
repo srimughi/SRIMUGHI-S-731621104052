@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transparent Login Form with Blur Background</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        body {
+    margin: 50;
+    padding: 10;
+    font-family: 'Poppins', sans-serif;
+}
+body:before {
+    content: '';
+    position: fixed;
+    width: 50vw;
+    height: 70vh;
+    background-image: url(https://images.inc.com/uploaded_files/image/1920x1080/getty_690028746_284206.jpg);
+    background-position: center center;
+    justify-content: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    /* -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    filter: blur(10px); */
+    text-align: center;
+    left:320px;
+    bottom: 14%;
+    opacity: rgba(255,255,255);
+}
+.contact-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 350px;
+    padding: 80px 40px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.avatar {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    top: calc(-80px/2);
+    left: 190px;
+}
+.contact-form h2 {
+    margin: 0;
+    padding:  20px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contact-form p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color:black;
+}
+.contact-form input {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.contact-form form input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color:transparent;
+    outline: none;
+    height: 40px;
+    color: lightgreen;
+    font-size: 16px;
+}
+
+.contact-form form input::placeholder {
+    color: red;
+}
+
+.contact-form input[type=submit] {
+    height: 30px;
+   font-size: 20px;
+   cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    margin-top: 13%;
+}
+.contact-form a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+button:hover {
+   color:blue;
+}
+
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+        <img alt="" class="avatar" src="https://i.postimg.cc/zDyt7KCv/a1.jpg">
+        <h2>Login Window</h2>
+        <form action="">
+            <p>Email</p><input placeholder="Email" type="email">
+            <p>Password</p><input placeholder="Password" type="password"><br>
+            <center><button type="submit">LOGIN</button></center>
+        </form>
+    </div>
+</body>
+</html>

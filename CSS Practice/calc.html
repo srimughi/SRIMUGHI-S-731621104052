@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>HTML Calculator</title> 
+  
+    <!-- For styling -->
+    <style> 
+        table { 
+            border: 15px solid grey; 
+            margin-left: auto; 
+            margin-right: auto; 
+         
+        } 
+          
+        input[type="button"] { 
+            width: 100%; 
+            padding: 20px 40px; 
+            background-color: aqua; 
+            color: grey; 
+            font-size: 24px; 
+            font-weight: bold; 
+            border: none; 
+            border-radius: 5px; 
+        } 
+          
+        input[type="text"] { 
+            padding: 30px 60px; 
+            font-size: 24px; 
+            font-weight: bold; 
+            
+           
+            
+            border: 2px solid gray; 
+        } 
+    </style> 
+</head> 
+  
+<body> 
+  
+    <!-- Create table -->
+    <table id="calcu"> 
+        <tr> 
+            <td colspan="5"> 
+                <input type="text" id="result"> 
+            </td> 
+           
+        </tr> 
+  
+        <tr> 
+            <td><input type="button" value="c"></td> 
+            <td><input type="button" value="%"></td> 
+            <td><input type="button" value="<="></td> 
+            <td><input type="button" value="/"></td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="7"></td> 
+            <td><input type="button" value="8"></td> 
+            <td><input type="button" value="9"></td> 
+            <td><input type="button" value="*"></td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="4"></td> 
+            <td><input type="button" value="5"></td> 
+            <td><input type="button" value="6"></td> 
+            <td><input type="button" value="-"></td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="1"></td> 
+            <td><input type="button" value="2"></td> 
+            <td><input type="button" value="3"></td> 
+            <td><input type="button" value="+"></td> 
+        </tr> 
+        <tr>
+            <td><input type="button" value="00"></td> 
+            <td><input type="button" value="0"></td> 
+            <td><input type="button" value="."></td> 
+            <td><input type="button" value="="></td> 
+        </tr>
+    </table> 
+</body> 
+  
+</html>
