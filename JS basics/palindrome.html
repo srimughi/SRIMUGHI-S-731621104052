@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Palindrome</title>
+<script>
+function Palindrome() {
+    var str = document.getElementById('n').value;
+    var formatStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+    var isPalindrome = true;
+    for (var i = 0; i < formatStr.length / 2; i++) {
+        if (formatStr[i] !== formatStr[formatStr.length - 1 - i]) {
+            isPalindrome = false;
+            break;
+        }
+    }
+    var result;
+    if (isPalindrome) {
+        resultMessage = '"' + str + '" is a Palindrome.';
+    } else {
+        result = '"' + str + '" is not a Palindrome.';
+    }
+    document.getElementById('result').innerHTML = result;
+}
+</script>
+</head>
+<body>
+    <h2>Palindrome Checker</h2>
+    Enter The String: <input type="text" id="n" value="Enter a String"
+onfocus="this.value=''" onblur="Palindrome()"/><br><br> 
+    <div id="result"></div>
+</body>
+</html>

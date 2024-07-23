@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Js prompt and confirm</title>
+<script>
+function welcome() {
+alert("Hello, Welcome to MyPage!");
+}
+function greeting() {
+let name= prompt("Enter your Name"); 
+alert("Welcome  " + name);
+ }
+function leave() {
+confirm("Do you want to leave the page?"); 
+}
+</script>
+</head>
+<body onload="welcome()" onunload="leave()">
+<button onclick="greeting()">Hii Page!</button>
+</body>
+</html>

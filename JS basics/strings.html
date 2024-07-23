@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>String</title>
+</head>
+<body>
+<h2>String Functions </h2>
+<p><strong>Sample Input:</strong></p>
+<textarea id="input" >
+Sri, Maha!
+</textarea><br>
+<button onclick="runStringFunctions()">Run String Functions</button>
+<p id="output"></p>
+<script>
+function runStringFunctions() {
+  let inputText = document.getElementById('input').value.trim();
+  let length = inputText.length;
+  displayOutput(`Length of the string: ${length}`);
+  let charAtIndex = inputText.charAt(7);
+  displayOutput(`Character at index 7: '${charAtIndex}'`);
+  let slicedStr = inputText.slice(7, 12);
+  displayOutput(`Slice from index 7 to 12: '${slicedStr}'`);
+  let substringStr = inputText.substring(7, 12);
+  displayOutput(`Substring from index 7 to 12: '${substringStr}'`);
+  let substrStr = inputText.substr(7, 5);
+  displayOutput(`Substr from index 7, length 5: '${substrStr}'`);
+  let uppercaseStr = inputText.toUpperCase();
+  displayOutput(`Uppercase string: '${uppercaseStr}'`);
+  let lowercaseStr = inputText.toLowerCase();
+  displayOutput(`Lowercase string: '${lowercaseStr}'`);
+  let concatStr = inputText.concat(' Have a nice day!');
+  displayOutput(`Concatenated string: '${concatStr}'`);
+  let trimStr = "   " + inputText + "   ";
+  displayOutput(`Trimmed string: '${trimStr.trim()}'`);
+  let trimStartStr = "   " + inputText + "   ";
+  displayOutput(`Trimmed from start: '${trimStartStr.trimStart()}'`);
+  let trimEndStr = "   " + inputText + "   ";
+  displayOutput(`Trimmed from end: '${trimEndStr.trimEnd()}'`);
+  let repeatStr = inputText;
+  displayOutput(`Repeated string: '${repeatStr.repeat(3)}'`);
+  let replaceStr = inputText;
+  let replaced = replaceStr.replace('World', 'Universe');
+  displayOutput(`Replaced string: '${replaced}'`);
+  if (String.prototype.replaceAll) {
+    let replacedAll = replaceStr.replaceAll('o', '0');
+    displayOutput(`Replace all 'o's with '0': '${replacedAll}'`);
+  } else {
+    displayOutput("replaceAll is not supported in this browser.");
+  }
+  let splitStr = "apple, orange, banana";
+  let splitArr = splitStr.split(', ');
+  displayOutput(`Split string: ${JSON.stringify(splitArr)}`);
+}
+function displayOutput(message) {
+  let output = document.getElementById('output');
+  output.innerHTML += message + "<br>";
+}
+</script>
+</body>
+</html>

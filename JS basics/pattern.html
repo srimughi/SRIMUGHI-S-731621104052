@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pattern</title>
+<script>
+function Pattern() {
+    var numRows = document.getElementById('n').value;
+    if (numRows <= 0 || !Number.isInteger(Number(numRows))) {
+        document.getElementById('result').innerHTML = "Please enter a positive integer.";
+        return;
+    }
+    var pattern = '';
+    for (var i = 1; i <= numRows; i++) {
+        for (var j = 1; j <= i; j++) {
+            pattern += '* ';
+        }
+        pattern += '<br>';
+    }
+    document.getElementById('result').innerHTML = pattern;
+}
+</script>
+</head>
+<body>
+    <h2>Star Pattern</h2>
+    Enter a Rows: <input type="text" id="n" value="Enter a Number"
+onfocus="this.value=''" onblur="Pattern()"/><br><br> 
+    <div id="result"></div>
+</body>
+</html>

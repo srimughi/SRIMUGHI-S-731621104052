@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript Events</title>
+</head>
+<body>
+<h2>JavaScript Events</h2>
+<p>Click the button below to change the text.</p>
+<button id="changeTextBtn">Change Text</button>
+<p id="outputText">SRIMUGHI.</p>
+<script>
+  const changeTextBtn = document.getElementById('changeTextBtn');
+  changeTextBtn.addEventListener('click', function() {
+    const outputText = document.getElementById('outputText');
+    outputText.textContent = 'HELLO EVENTS!!';
+  });
+</script>
+</body>
+</html>
