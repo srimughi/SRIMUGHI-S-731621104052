@@ -1,0 +1,30 @@
+<html>
+    <head>
+</head>
+<body>
+<center>
+    Enter the Number <input type="text" id="n" />
+    <br>
+    <button onclick="factorial()">Factorial</button>
+    <br>
+    <br>
+    <div id="ResultDiv">
+    </div>
+    </center>
+    <script>
+    const factorial = () => {
+    let n = parseInt(document.getElementById("n").value);
+    let result = "<table border='1' width='50%'>";
+    result += "<tr><th>Number</th><th>Factorial</th></tr>";
+    for(let k=1; k<=n; k++) {
+    let fact = 1;
+    for(let i=1; i<=k; i++) {
+    fact =fact*i;
+    }
+    result += "<tr><td>"+k+"</td><td>"+ fact +"</td></tr>";
+    }
+    result += "</table>";
+    document.getElementById("ResultDiv").innerHTML = result;
+    }
+    </script>
+    </body>

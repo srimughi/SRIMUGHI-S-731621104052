@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+  <h1>Factorial</h1>
+  <div id="factorial">
+    <label for="number">Enter a number:</label>
+    <input type="number" id="number" min="0"><br><br>
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+    <p id="result"></p>
+  </div>
+  <script>
+    const factorial = (num) => {
+      if (num === 0 || num === 1) {
+        return 1;
+      } else {
+        return num * factorial(num - 1);
+      }
+    };
+    const calculateFactorial = () => {
+      const inputNumber = document.getElementById('number').value;
+      const resultE = document.getElementById('result');
+      if (inputNumber === '' || isNaN(inputNumber) || inputNumber < 0) {
+        result.textContent = 'Please enter a non-negative number.';
+      } else {
+        const num = parseInt(inputNumber);
+        const fact = factorial(num);
+        result.textContent = `Factorial of ${num} is: ${fact}`;
+      }
+    };
+  </script>
+</body>
+</html>

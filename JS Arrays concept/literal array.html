@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>JS Array</title>
+    <script>
+        function myFunction(){
+            let skills  = new Array("C", "c++", "Java", "Python");
+            document.write("Array Elements: " + skills);
+            document.write("<br>Total number of Elements: " + skills.length);
+            document.write("<br>Last Element: " + skills[skills.length - 1]);
+            document.write("<br>First Element: " + skills[0]);
+           
+            skills.push(".net");
+            document.write("<br>Array Elements after pushing '.net': " + skills);
+           
+            skills.pop();
+            document.write("<br>Array Elements after popping: " + skills);
+           
+            for(let i = 0; i < skills.length; i++){
+                document.write("<br>" + skills[i]);
+            }
+        }
+    </script>
+</head>
+<body onload="myFunction()">
+</body>
+</html>
