@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snapdeal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .topnav {
+            line-height: 28px;
+            background-color: brown;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+        }
+        .topnav ul {
+            display: flex;
+            list-style: none;
+        }
+        .topnav ul li {
+            margin-right: 20px;
+        }
+        .topnav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .topnav h2 {
+            font-size: 12px;
+        }
+        .mainnav {
+            background-color: red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logoimg img {
+            height: 30px;
+        }
+        .search {
+            width: 60%;
+            display: flex;
+            align-items: center;
+        }
+        .search input {
+            width: 80%;
+            height: 38px;
+            border: none;
+            border-radius: 2px;
+            font-size: 16px;
+            padding-left: 10px;
+        }
+        .search button {
+            width: 20%;
+            height: 38px;
+            background-color:black;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .moreitemslist {
+            display: flex;
+            align-items: center;
+        }
+        .moreitemslist .moreitems1, .moreitemslist .moreitems2 {
+            padding: 0 20px;
+        }
+        .moreitems1 a, .moreitems2 a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            top: 100%;
+            right: 0;
+            margin-top: 5px;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown-content a img {
+            height: 20px;
+            margin-right: 10px;
+        }
+        .dropdown-content a:hover {
+            background-color: white;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .btn-signin {
+            background-color: black;
+        }
+        .categories {
+            background-color: white;
+            padding: 20px;
+        }
+        .categories h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .categories ul {
+            list-style: none;
+        }
+        .categories ul li {
+            margin-bottom: 10px;
+        }
+        .categories ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        .searchterms {
+            background-color: white;
+            padding: 20px;
+            border-top: 1px solid white;
+        }
+        .searchterms h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .searchterms ul {
+            list-style: none;
+        }
+        .searchterms ul li {
+            margin-bottom: 10px;
+        }
+        .searchterms ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        .center-image {
+            text-align: center;
+            padding: 20px;
+        }
+        .center-image img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="topnav">
+        <h2>Brand Waali Quality, Bazaar Waali Deal!</h2>
+        <ul>
+            <li><a href="#">Impact@Snapdeal</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Sell On Snapdeal</a></li>
+            <li><a href="#"><i class="fas fa-mobile-alt"></i> Download App</a></li>
+        </ul>
+    </nav>
+    <nav class="mainnav">
+        <div class="logoimg">
+            <a href="index.html">
+                <img src="https://i3.sdlcdn.com/img/snapdeal/darwin/logo/sdLatestLogo.svg" alt="Snapdeal Logo">
+            </a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search products & brands">
+            <button class="btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+        <div class="moreitemslist">
+            <div class="moreitems1">
+                <a href="#">Cart <i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="dropdown">
+                <button class="btn-signin"><i class="fas fa-user-circle"></i> Sign In</button>
+                <div class="dropdown-content">
+                    <div class="signsub">
+                        <a href="#"><i class="far fa-user"></i> Your Account</a>
+                        <a href="#"><i class="fas fa-box-open"></i> Your Orders</a>
+                        <a href="#"><i class="far fa-heart"></i> Shortlist</a>
+                        <a href="#"><i class="fas fa-hand-holding-usd"></i> SD Cash</a>
+                        <a href="#">Register</a>
+                        <a href="#">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="center-image">
+        <img src="https://www.adgully.com/img/800/202104/snapdeal-campaign-2.jpeg" alt="Snapdeal Campaign">
+    </div>
+    <div class="categories">
+        <h2>TOP CATEGORIES</h2>
+        <ul>
+            <li><a href="#">All Offers</a></li>
+            <li><a href="#">Mobile & Tablets</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Computers & Gaming</a></li>
+            <li><a href="#">Home & Kitchen</a></li>
+        </ul><br><br>
+        <h2>MORE CATEGORIES</h2>
+        <ul>
+            <li><a href="#">Men's Fashion</a></li>
+            <li><a href="#">Women's Fashion</a></li>
+            <li><a href="#">Toys, Kids Fashion & More</a></li>
+            <li><a href="#">Beauty, Health & Daily Needs</a></li>
+            <li><a href="#">Sports, Fitness & Outdoor</a></li>
+            <li><a href="#">Car & Motorbike</a></li>
+            <li><a href="#">Hobbies</a></li>
+            <li><a href="#">Books, Media & Music</a></li>
+            <li><a href="#">See All Categories</a></li>
+        </ul>
+    </div>
+    <div class="searchterms">
+        <h2>TRENDING SEARCHES</h2>
+        <ul>
+            <li><a href="#"><i class="fas fa-search"></i> Hair Straightener</a></li>
+            <li><a href="#"><i class="fas fa-search"></i> Makeup Kit</a></li>
+            <li><a href="#"><i class="fas fa-search"></i> Hookah</a></li>
+            <li><a href="#"><i class="fas fa-search"></i> Sling Bag</a></li>
+            <li><a href="#"><i class="fas fa-search"></i> Bluetooth Speaker</a></li>
+        </ul>
+    </div>
+</body>
+</html>
