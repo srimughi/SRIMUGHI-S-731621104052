@@ -1,0 +1,60 @@
+
+<html lang="en">
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #eventTarget {
+      text-align: center;
+      padding: 20px;
+      border: 5px solid darkblue;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #eventTarget:hover {
+      background-color: lightgreen;
+    }
+    #inputField {
+      display: block;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="eventTarget">
+    <h2>Click me!</h2>
+    <p>press any key!</p>
+  </div>
+  <br><br>
+  <input id="inputField" type="text" placeholder="Type something"><br>
+  <script>
+    const eventTarget = document.getElementById('eventTarget');
+    const inputField = document.getElementById('inputField');
+    eventTarget.onclick = function() {
+      alert('You clicked me!');
+    };
+    eventTarget.onmouseover = function() {
+      eventTarget.style.backgroundColor = 'green';
+    };
+    eventTarget.onmouseout = function() {
+      eventTarget.style.backgroundColor = '';
+    };
+    document.onkeydown = function(event) {
+      const key = event.key;
+      alert(`You pressed "${key}" key.`);
+    };
+    inputField.onchange = function(event) {
+      const value = event.target.value;
+      alert(`Input value changed to "${value}".`);
+    };
+  </script>
+</body>
+</html>
