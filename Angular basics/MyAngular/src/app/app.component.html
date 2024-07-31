@@ -1,0 +1,30 @@
+<div class="Project">
+  <h1>Business File Management System</h1>
+  <div class="form-container">
+    <h2>Add New Project</h2>
+    <form (submit)="addItem($event)">
+      <label for="item-name">FileName:</label>
+      <input id="item-name" name="item-name" [(ngModel)]="newItem.name" required />
+      <button type="submit">Add</button>
+    </form>
+  </div>
+  <div class="item-list">
+    <h2>Project Name</h2>
+    <ul>
+      <li *ngFor="let item of items">
+        <button (click)="editItem(item)">Edit</button>
+        <button (click)="deleteItem(item)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  <div class="edit-container" *ngIf="editingItem">
+    <h2>Edit Project Name</h2>
+    <form (submit)="updateItem($event)">
+      <label for="edit-item-name">FileName:</label>
+      <input id="edit-item-name" name="edit-item-name" [(ngModel)]="editingItem.name" required />
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>
+
+

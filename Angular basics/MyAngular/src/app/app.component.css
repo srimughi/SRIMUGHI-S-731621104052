@@ -1,0 +1,52 @@
+.project{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .form-container,
+  .edit-container {
+    margin-bottom: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  label {
+    font-weight: bold;
+  }
+  input {
+    padding: 8px;
+    border: 1px solid lightgrey;
+  }
+  button {
+    padding: 8px 16px;
+    color: white;
+    background-color: darkgreen;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: darkred;
+  }
+  .item-list {
+    margin-top: 20px;
+  }
+  .item-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .item-list li {
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom:solid white;
+  }
+  .item-list button {
+    background-color: red;
+    margin-left: 5px;
+  }
+  .item-list button:hover {
+    background-color:darkblue;
+  }
+  
