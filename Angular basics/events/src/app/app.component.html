@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    </head>
+
+    <body>
+        <h1>Event Calendar</h1>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                             <form #myForm="ngForm">
+                                <div class="form-group">
+                                    <label for="Event Id">
+                                        Event Id
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="eventId" 
+                                           #eventId="ngModel" ngModel
+                                           required
+                                           pattern="[0-9]+"
+                                            />
+                                </div>
+                                <div *ngIf="eventId.touched">
+                                  <div *ngIf = "eventId.errors ?.['required']">
+                                    <b style ="color: red;">Event Id Required.</b>
+                                  </div>
+                                  <div *ngIf = "eventId.errors ?.['pattern']">
+                                    <b style ="color: red;"> Id Required.</b>
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Event Name">
+                                        Event Name
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="eventName" 
+                                           #eventName="ngModel" ngModel
+                                            />
+                                </div>
+                                <div class="form-group">
+                                    <label for="EventDate">
+                                        EventDate
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="eventDate" 
+                                           #eventDate="ngModel" ngModel
+                                           />
+                                </div>
+                                                              
+                                <button class="btn btn-success" (click)="insertEvent(myForm.value)">
+                                    Insert 
+                                </button>
+                            &nbsp;&nbsp;
+                                <button class="btn btn-primary" (click)="updateEvent(myForm.value)" >
+                                    Update 
+                                </button>&nbsp;&nbsp;
+                                <button class="btn btn-danger" (click)="deleteEvent(myForm.value)">
+                                    Delete 
+                                </button>&nbsp;&nbsp;
+                                <button class="btn btn-warning" (click)="findEvent(myForm.value)" >
+                                    Find 
+                                </button>
+                                &nbsp;&nbsp;
+                                <button class="btn btn-info" (click)="findAllEvent()">
+                                    Find All
+                                </button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+         <br>
+    <h3>{{result}}</h3>
+    <div style="width: 100%;" *ngIf="flag">
+        <table width="80%" align="center" class="table table-borderd">
+         <tr><th>Event Id</th><th>Event Name</th><th>Event Date</th></tr> 
+          <tr *ngFor="let event of eventArr">
+              <td> {{event.id}} </td><td> {{event.eventName}} </td><td> {{event.eventDate}} </td>
+          </tr>
+       </table>
+       </div>      
+ </body>
+</html>
+
+
+

@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    </head>
+
+    <body>
+        <h1>Event Calendar</h1>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                             <form #myForm="ngForm">
+                                <div class="form-group">
+                                    <label for="EventName">
+                                        EventName
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="eventName" 
+                                           #eventName="ngModel" ngModel
+                                           required
+                                           pattern="[0-9]+"
+                                            />
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="Eventid">
+                                        Eventid
+                                    </label>
+                                    <input type="number" 
+                                           class="form-control" 
+                                           name="Eventid" 
+                                           #Eventid="ngModel" ngModel
+                                            />
+                                </div>
+                                <div class="form-group">
+                                    <label for="EventDay">
+                                       EventDay
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="eventDay" 
+                                           #eventDay="ngModel" ngModel
+                                           />
+                                </div>
+                                                              
+                                <button class="btn btn-success" (click)="insertEvent(myForm.value)">
+                                    Insert 
+                                </button>
+                            &nbsp;&nbsp;
+                                <button class="btn btn-primary" (click)="updateEvent(myForm.value)" >
+                                    Update 
+                                </button>&nbsp;&nbsp;
+                                <button class="btn btn-danger" (click)="deleteEvent(myForm.value)">
+                                    Delete 
+                                </button>&nbsp;&nbsp;
+                                <button class="btn btn-warning" (click)="findEvent(myForm.value)" >
+                                    Find 
+                                </button>
+                                &nbsp;&nbsp;
+                                <button class="btn btn-info" (click)="findAllEvent()">
+                                    Find All
+                                </button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+         <br>
+    <h3>{{result}}</h3>
+    <div style="width: 100%;" *ngIf="flag">
+        <table width="80%" align="center" class="table table-borderd">
+         <tr><th>EventName</th><th>Eventid</th><th>EventDay</th></tr> 
+          <tr *ngFor="let event of eventArr">
+              <td> {{event.EventName}} </td><td> {{event.id}} </td><td> {{event.EventDay}} </td>
+          </tr>
+       </table>
+       </div>      
+ </body>
+</html>
+
+
+
