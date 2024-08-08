@@ -6,28 +6,28 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EventService {
     url :string;
-    events : Event;
+    event : Event;
     eventArr :Event[];
   constructor(private http : HttpClient) { //predefined service for http
-      this.url = "http://localhost:3004/events";
-      this.events = new Event();
+      this.url = "http://localhost:3004/event";
+      this.event = new Event();
       this.eventArr =[];
   }
-  insertEvent(events : Event){
-    this.http.post<Event>(this.url,events).subscribe() //post-->update method is called by http client <Employee says where ii is saving
+  insertEvent(event : Event){
+    this.http.post<Event>(this.url,event).subscribe() //post-->update method is called by http client <Employee says where ii is saving
     return "Event Details Added"; //subscribe==>commit
   }
   updateEvent(event : Event){
     this.http.put<Event>(this.url+"/"+event.id,event).subscribe(); //post-->update method is called by http client <Employee says where ii is saving
     return "Event Details Updated"; //subscribe==>commit
   }
-  deleteEvent(eventId : number){
-    this.http.delete<Event>(this.url+"/"+eventId).subscribe(); //post-->update method is called by http client <Employee says where ii is saving
+  deleteEvent(id : number){
+    this.http.delete<Event>(this.url+"/"+id).subscribe(); //post-->update method is called by http client <Employee says where ii is saving
     return "Event Details Deleted";
   }
   
-  findEvent(eventId : number){
-    this.http.get<Event>(this.url+"/"+eventId).subscribe(data =>this.event=data); //post-->update method is called by http client <Employee says where ii is saving
+  findEvent(id: number){
+    this.http.get<Event>(this.url+"/"+id).subscribe(data =>this.event=data); //post-->update method is called by http client <Employee says where ii is saving
      return this.event;
   }
   findAllEvent(){

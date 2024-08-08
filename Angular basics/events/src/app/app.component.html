@@ -15,17 +15,17 @@
                                     </label>
                                     <input type="text" 
                                            class="form-control" 
-                                           name="eventId" 
-                                           #eventId="ngModel" ngModel
+                                           name="id" 
+                                           #id="ngModel" ngModel
                                            required
                                            pattern="[0-9]+"
                                             />
                                 </div>
-                                <div *ngIf="eventId.touched">
-                                  <div *ngIf = "eventId.errors ?.['required']">
+                                <div *ngIf="id.touched">
+                                  <div *ngIf = "id.errors ?.['required']">
                                     <b style ="color: red;">Event Id Required.</b>
                                   </div>
-                                  <div *ngIf = "eventId.errors ?.['pattern']">
+                                  <div *ngIf = "id.errors ?.['pattern']">
                                     <b style ="color: red;"> Id Required.</b>
                                 </div>
                                 </div>
@@ -40,8 +40,8 @@
                                             />
                                 </div>
                                 <div class="form-group">
-                                    <label for="EventDate">
-                                        EventDate
+                                    <label for="Event Date">
+                                        Event Date
                                     </label>
                                     <input type="text" 
                                            class="form-control" 

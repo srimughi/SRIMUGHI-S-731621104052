@@ -7,37 +7,37 @@ import { EventService } from './event.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  events : Event;
+  event : Event;
   result : string;
   eventArr : Event[];
   flag : boolean;
   constructor(private service : EventService){ //injecting own service
-    this.events = new Event();
+    this.event= new Event();
     this.result = "";
     this.eventArr = [];
     this.flag = false;
   }  //  memory allocation assigning 
   insertEvent(data : any){
-    this.events.id=data.eventId; //taking value from text box model object
-    this.events.eventName=data.eventName;
-    this.events.eventDate=data.eventDate;
-    alert(data.eventId+" "+data.eventName+" "+data.eventDate);
-    this.result = this.service.insertEvent(this.events); // object as an arguement
+    this.event.id=data.id; //taking value from text box model object
+    this.event.eventName=data.eventName;
+    this.event.eventDate=data.eventDate;
+    alert(data.id+" "+data.eventName+" "+data.eventDate);
+    this.result = this.service.insertEvent(this.event); // object as an arguement
      //employee service file 
   }
   updateEvent(data : any){
-    this.events.id=data.eventId; //taking value from text box model object
-    this.events.eventName=data.eventName;
-    this.events.eventDate=data.eventDate;
-    alert(data.eventId+" "+data.eventName+" "+data.eventDate);
-    this.result = this.service.updateEvent(this.events); 
+    this.event.id=data.id; //taking value from text box model object
+    this.event.eventName=data.eventName;
+    this.event.eventDate=data.eventDate;
+    alert(data.id+" "+data.eventName+" "+data.eventDate);
+    this.result = this.service.updateEvent(this.event); 
 }
   deleteEvent(data : any){
-    this.result = this.service.deleteEvent(data.eventId); 
+    this.result = this.service.deleteEvent(data.id); 
   }
   findEvent(data : any){
-    this.events = this.service.findEvent(data.eventId);
-    this.result = this.events.id +" "+this.events.eventName+" "+this.events.eventDate;
+    this.event = this.service.findEvent(data.id);
+    this.result = this.event.id +" "+this.event.eventName+" "+this.event.eventDate;
   }
   findAllEvent(){
     this.eventArr = this.service.findAllEvent();

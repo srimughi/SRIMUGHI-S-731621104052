@@ -1,8 +1,114 @@
-label{
-    font-weight: bold;
-    color: brown
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue; 
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
-h1{
+h1 {
     text-align: center;
-    color:brown;
+    margin-top: 20px;
+    color: #007bff; 
+}
+.container {
+    margin-top: 30px;
+    background-color:pink; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+.form-control {
+    border-radius: 5px;
+    border-color: #ced4da;
+    background-color: #f8f9fa; 
+}
+.btn {
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 5px;
+}
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+.table {
+    background-color:lightgreen;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    margin: 20px auto; 
+}
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #007bff; 
+    color: white;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+.table tr:hover {
+    background-color: #e9ecef; 
+}
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .table {
+        width: 100%;
+    }
 }
